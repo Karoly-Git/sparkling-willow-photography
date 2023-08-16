@@ -1,0 +1,26 @@
+<p>
+    Family portraits are always special to have. These photoshoots are fun and relaxed and can be enjoyed by the whole
+    family. These can be done outdoors or in my home studio depending on your preferred style. These shoots create
+    timeless memories and make lovely keepsakes or gifts.
+</p>
+
+<div class="container">
+    <div class="gallery">
+        <div class="photo-box">
+        </div>
+    </div>
+</div>
+
+<script>
+    function insertPhotosToGallery(folder, tag, category, numOfPhotos, selector) {
+        for (let index = 1; index <= numOfPhotos; index++) {
+            let storage = document.querySelector(selector);
+
+            let photo = `<a href="img/gallery/${folder}/${tag}-${index}.jpg" data-lightbox="roadtrip" data-title="${category}">
+            <img class="gal-img" src="img/gallery/${folder}/${tag}-${index}.jpg" alt="${category} photo">
+        </a>`;
+            storage.innerHTML += photo;
+        }
+    }
+    insertPhotosToGallery('family', 'family', 'Family', 25, '.gallery .photo-box')
+</script>

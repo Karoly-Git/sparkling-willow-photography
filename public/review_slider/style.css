@@ -1,0 +1,92 @@
+  @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+  :root {
+      --review-width: 100%;
+  }
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  .reviewSlider {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      width: var(--review-width);
+      overflow: hidden;
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+      z-index: 0;
+      background-color: rgba(38, 38, 38, 1);
+  }
+
+  .reviewDisplayBox {
+      display: flex;
+      align-items: center;
+      width: calc(1% * 100/3);
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .reviewSlide {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      align-items: center;
+      justify-content: center;
+      min-width: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      z-index: 50;
+      /*border: 1px solid gray;*/
+  }
+
+  .stars {
+      margin-bottom: 1rem;
+      *color: black;
+      font-size: 1.5rem;
+  }
+
+  .review {
+      text-align: center;
+      font-size: 1.25rem;
+      font-family: 'Gochi Hand', cursive;
+      letter-spacing: 2px;
+  }
+
+  .name {
+      margin-bottom: 1rem;
+      text-align: center;
+      letter-spacing: 2px;
+      font-family: sans-serif;
+  }
+
+  .read-all {
+      font-family: sans-serif;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.5);
+  }
+
+  .read-all:hover {
+      color: azure;
+  }
+
+  @media only screen and (max-width: 1000px) {
+      .reviewDisplayBox {
+          width: 50%;
+      }
+  }
+
+  @media only screen and (max-width: 600px) {
+      .reviewDisplayBox {
+          width: 80%;
+      }
+  }

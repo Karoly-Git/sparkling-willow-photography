@@ -1,0 +1,25 @@
+<p>
+    Babies grow so fast and it is wonderful to capture the first few days of their life and be able to keep those
+    precious moments always. The best time to capture your little one is between 5 and 14 days old.
+</p>
+
+<div class="container">
+    <div class="gallery">
+        <div class="photo-box">
+        </div>
+    </div>
+</div>
+
+<script>
+    function insertPhotosToGallery(folder, tag, category, numOfPhotos, selector) {
+        for (let index = 1; index <= numOfPhotos; index++) {
+            let storage = document.querySelector(selector);
+
+            let photo = `<a href="img/gallery/${folder}/${tag}-${index}.jpg" data-lightbox="roadtrip" data-title="${category}">
+            <img class="gal-img" src="img/gallery/${folder}/${tag}-${index}.jpg" alt="${category} photo">
+        </a>`;
+            storage.innerHTML += photo;
+        }
+    }
+    insertPhotosToGallery('newborn', 'newborn', 'Newborn', 40, '.gallery .photo-box')
+</script>

@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    min-width: 350px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+/*
+body::-webkit-scrollbar {
+    display: none;
+}
+*/
+
+#scroll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(57, 57, 57);
+    width: 1.75rem;
+    height: 2.5rem;
+    color: white;
+    font-size: 2rem;
+    position: fixed;
+    bottom: 2rem;
+    right: -1.75rem;
+    border-radius: 0.65rem 0 0 0.65rem;
+    cursor: pointer;
+    z-index: 1010;
+    transition: all 200ms ease-in-out;
+}
+
+#scroll i {
+    color: azure;
+    font-size: 0.85rem;
+}
+
+.container {
+    display: flex;
+    padding: 1rem 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    background-color: black;
+    z-index: 100;
+}
+
+#logo {
+    height: 4.25rem;
+}
+
+#navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+}
+
+#menu>li>a {
+    text-decoration: none;
+    padding: 0.25rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'M PLUS 2', sans-serif;
+    user-select: none;
+    color: azure;
+}
+
+#menu li a:hover:not(#menu li:nth-child(2) a) {
+    transition: all 150ms ease-in-out;
+    background-color: azure;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.hamburger-social-link {
+    background-color: transparent !important;
+}
+
+.display-only-hamburger {
+    display: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#bottom-navigation {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
+}
+
+#bottom-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0.5rem 0;
+}
+
+#bottom-menu li {
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+#bottom-menu a {
+    text-decoration: none;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-family: 'M PLUS 2', sans-serif;
+    font-weight: 600;
+    user-select: none;
+    color: azure;
+    transition: all 150ms ease-in-out;
+}
+
+#bottom-menu a:hover {
+    background-color: azure;
+    color: black;
+}
+
+.social-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 0.5rem;
+}
+
+.social-icon {
+    width: 1.75rem;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+    padding: 0.25rem;
+    transition: all 100ms ease-in-out;
+}
+
+.social-icon:not(.social-icon li:last-child) {
+    margin-right: 0.5rem;
+}
+
+.social-icon:hover {
+    box-shadow: 0 0 5px 2px white;
+}
+
+#copyright {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(38, 38, 38);
+    color: azure;
+    font-family: 'Hubballi', cursive;
+    text-align: center;
+}
+
+#webdevme {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.3);
+    font-family: 'Hubballi', cursive;
+    padding-top: 0.5rem;
+}
+
+.underlined {
+    text-decoration: underline !important;
+}
+
+.underlined:hover {
+    color: rgba(240, 255, 255, 0.5);
+}
+
+
+.submenu {
+    transition: all 150ms ease-in-out;
+}
+
+.has-submenu:hover .submenu {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.has-submenu .fa-caret-down {
+    font-size: 0.9rem;
+}
+
+.has-submenu .fa-caret-right {
+    font-size: 0.75rem;
+    display: none;
+}
+
+.submenu {
+    pointer-events: none;
+    opacity: 0;
+    background-color: white;
+    position: absolute;
+    list-style: none;
+    font-family: 'M PLUS 2', sans-serif;
+}
+
+.submenu li {
+    display: flex;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.55);
+}
+
+.submenu a {
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    padding: 0.25rem 1.25rem;
+    font-size: 0.8rem;
+}
+
+.submenu a:hover {
+    color: azure;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+@media only screen and (max-width: 850px) {
+    .display-only-hamburger {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .display-only-hamburger {
+        display: block;
+    }
+
+    header {
+        padding: 0.5rem 1rem;
+    }
+
+    #logo {
+        height: 4rem;
+    }
+}

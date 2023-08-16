@@ -1,0 +1,130 @@
+:root {
+    --hamburger-height: 1.1rem;
+    --hamburger-width: calc(var(--hamburger-height) * 1.4);
+    --hamburger-line-height: calc(var(--hamburger-height) * 0.12);
+    --hamburger-line-radius: calc(var(--hamburger-line-height) * 0.35);
+}
+
+#hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: var(--hamburger-height);
+    width: var(--hamburger-width);
+    cursor: pointer;
+    user-select: none;
+    box-sizing: content-box;
+    list-style: none;
+    position: relative;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: var(--hamburger-line-height);
+    border-radius: var(--hamburger-line-radius);
+    background-color: rgb(80, 114, 126);
+    background-color: azure;
+    transition: all 300ms ease-in-out;
+}
+
+.hamburger_after_click .hamburger-line:first-child {
+    transform: translate(0rem, calc(var(--hamburger-height) * 0.45)) rotate(45deg);
+    background-color: black;
+    background-color: darkred;
+    background-color: azure;
+}
+
+.hamburger_after_click .hamburger-line:nth-child(2) {
+    transform: translateX(-50px);
+    background-color: transparent;
+}
+
+.hamburger_after_click .hamburger-line:last-child {
+    transform: translate(0rem, calc(-1 * var(--hamburger-height) * 0.45)) rotate(-45deg);
+    background-color: black;
+    background-color: darkred;
+    background-color: azure;
+}
+
+@media only screen and (max-width: 1070px) {
+    #navigation {
+        flex-direction: column;
+    }
+
+    #hamburger {
+        display: flex;
+    }
+
+    #menu {
+        transition: all 200ms ease-in-out;
+        opacity: 0;
+        pointer-events: none;
+        padding-top: 1rem;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 128px;
+        left: 0;
+        background-color: transparent;
+        background-color: rgba(80, 114, 126, 0.98);
+        width: 100%;
+        height: 100vh;
+    }
+
+    #menu>li {
+        margin-top: 1rem;
+    }
+
+    #menu>li>a:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: azure;
+    }
+
+    #menu li a {
+        color: azure;
+    }
+
+    .has-submenu .fa-caret-down {
+        display: none;
+    }
+
+    .has-submenu .fa-caret-right {
+        display: inline;
+    }
+
+    .submenu {
+        background-color: transparent;
+        margin-top: -1.47rem;
+        margin-left: 8rem;
+        width: unset;
+    }
+
+    .submenu>li {
+        width: unset;
+        border-bottom-color: white;
+    }
+
+    .submenu>li a {
+        padding-left: 0.15rem;
+        padding-right: 0.15rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #hamburger {
+        margin-bottom: 0.35rem;
+    }
+
+    #menu {
+        top: 104.8px;
+    }
+}
+
+.menu_after_click {
+    opacity: 1 !important;
+    pointer-events: all !important;
+}
+
+.body_after_click {
+    overflow: hidden;
+}

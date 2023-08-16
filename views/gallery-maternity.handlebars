@@ -1,0 +1,27 @@
+<p>
+    From the moment you find out you're growing a little person, your life will change in more ways than you can
+    imagine. Maternity shoots can be as formal or informal as you'd like. These shoots can be done in my home studio
+    or in an agreed outdoor location. The best time to do your maternity shoot is in the few weeks following the
+    start of your third trimester.
+</p>
+
+<div class="container">
+    <div class="gallery">
+        <div class="photo-box">
+        </div>
+    </div>
+</div>
+
+<script>
+    function insertPhotosToGallery(folder, tag, category, numOfPhotos, selector) {
+        for (let index = 1; index <= numOfPhotos; index++) {
+            let storage = document.querySelector(selector);
+
+            let photo = `<a href="img/gallery/${folder}/${tag}-${index}.jpg" data-lightbox="roadtrip" data-title="${category}">
+            <img class="gal-img" src="img/gallery/${folder}/${tag}-${index}.jpg" alt="${category} photo">
+        </a>`;
+            storage.innerHTML += photo;
+        }
+    }
+    insertPhotosToGallery('maternity', 'maternity', 'Maternity', 16, '.gallery .photo-box')
+</script>

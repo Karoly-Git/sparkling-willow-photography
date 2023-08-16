@@ -1,0 +1,26 @@
+<p>
+    Your wedding day is one of the most important days of your life. All those months of planning down to every details
+    and its over in the blink of an eye. That's why it is so important to have every moment captured so that you can
+    look back and relive your special day.
+</p>
+
+<div class="container">
+    <div class="gallery">
+        <div class="photo-box">
+        </div>
+    </div>
+</div>
+
+<script>
+    function insertPhotosToGallery(folder, tag, category, numOfPhotos, selector) {
+        for (let index = 1; index <= numOfPhotos; index++) {
+            let storage = document.querySelector(selector);
+
+            let photo = `<a href="img/gallery/${folder}/${tag}-${index}.jpg" data-lightbox="roadtrip" data-title="${category}">
+            <img class="gal-img" src="img/gallery/${folder}/${tag}-${index}.jpg" alt="${category} photo">
+        </a>`;
+            storage.innerHTML += photo;
+        }
+    }
+    insertPhotosToGallery('wedding', 'wedding', 'Wedding', 11, '.gallery .photo-box')
+</script>

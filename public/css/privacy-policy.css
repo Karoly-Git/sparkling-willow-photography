@@ -1,0 +1,57 @@
+.container * {
+    font-family: 'Hubballi', cursive;
+}
+
+.container {
+    padding-top: 1rem;
+}
+
+#content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 80%;
+}
+
+#content-box h1 {
+    margin-bottom: 2rem;
+    padding-top: 0;
+}
+
+#content-box>ul {
+    list-style: none;
+}
+
+#content-box h3 {
+    margin-bottom: 1rem;
+}
+
+#content-box p {
+    margin-bottom: 1rem;
+}
+
+#content-box li:last-child p {
+    margin-bottom: 0;
+}
+
+.sub-list {
+    list-style: disc;
+    *margin-bottom: 2rem;
+}
+
+.sub-list li {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.sub-list li:last-child {
+    margin-bottom: 1rem;
+}
+
+p a {
+    color: rgb(80, 114, 126);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+}

@@ -1,0 +1,24 @@
+<p>
+    Award Winning Photos
+</p>
+
+<div class="container">
+    <div class="gallery">
+        <div class="photo-box">
+        </div>
+    </div>
+</div>
+
+<script>
+    function insertPhotosToGallery(folder, tag, category, numOfPhotos, selector) {
+        for (let index = 1; index <= numOfPhotos; index++) {
+            let storage = document.querySelector(selector);
+
+            let photo = `<a href="img/gallery/${folder}/${tag}-${index}.jpg" data-lightbox="roadtrip" data-title="${category}">
+            <img class="gal-img" src="img/gallery/${folder}/${tag}-${index}.jpg" alt="${category} photo">
+        </a>`;
+            storage.innerHTML += photo;
+        }
+    }
+    insertPhotosToGallery('engagement', 'engagement', 'Engagement', 2, '.gallery .photo-box')
+</script>

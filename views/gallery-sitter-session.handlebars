@@ -1,0 +1,26 @@
+<p>
+    Babies grow so fast and reach so many amazing milestones so quickly and capturing them makes them so much more
+    special. These sessions are for babies who can sit unaided but are not yet walking or crawling. I aim to capture
+    their ever-growing personality and beautiful smile while they're growing into a little independent person
+</p>
+
+<div class="container">
+    <div class="gallery">
+        <div class="photo-box">
+        </div>
+    </div>
+</div>
+
+<script>
+    function insertPhotosToGallery(folder, tag, category, numOfPhotos, selector) {
+        for (let index = 1; index <= numOfPhotos; index++) {
+            let storage = document.querySelector(selector);
+
+            let photo = `<a href="img/gallery/${folder}/${tag}-${index}.jpg" data-lightbox="roadtrip" data-title="${category}">
+            <img class="gal-img" src="img/gallery/${folder}/${tag}-${index}.jpg" alt="${category} photo">
+        </a>`;
+            storage.innerHTML += photo;
+        }
+    }
+    insertPhotosToGallery('sitter-session', 'sitter-session', 'Sitter Session', 2, '.gallery .photo-box')
+</script>

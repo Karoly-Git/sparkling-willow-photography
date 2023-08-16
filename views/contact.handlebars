@@ -1,0 +1,69 @@
+<div class="container">
+    <div id="form-container">
+
+        <h1>Contact me</h1>
+
+        <p>
+            If you have any questions or would like to book or discuss your next photoshoot,
+            please send me a message
+            <i class="smile fa-regular fa-face-smile"></i>.
+        </p>
+
+        <form action="/sendmail" method="POST">
+            <span class="required required-name"> Name is required! </span>
+
+            <label for="name"> Name * </label>
+            <input class="input must-be-given" type="text" placeholder="Enter your name" id="name" name="sender_name"
+                required>
+
+            <span class="required required-email"> Email address is required! </span>
+            <span class="not-valid-email  isValidEmail"> This email doesn't seem to be valid. It should follow the
+                format user@domain.com </span>
+            <label for="email"> Email * </label>
+            <input class="input must-be-given" type="email" placeholder="Enter your email" id="email"
+                name="sender_email" required>
+
+            <label for="tel"> Telephone </label>
+            <input class="input" type="tel" placeholder="Enter your phone number" id="tel" name="sender_phone">
+
+            <span class="required required-message"> Please type a message! </span>
+
+            <label for="message"> How can I help? * </label>
+            <textarea class="message must-be-given" placeholder="Type your message here" id="message" name="message"
+                required></textarea>
+
+            <div class="human-container">
+                <span class="required required-check"> Verification is required! </span>
+                <div id="please-verify">Verify that you're a human.</div>
+
+                <div class="box box-human">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <label for="checkbox">I am human. </label>
+                </div>
+
+
+                <div class="hidden">
+                    <div id="please-answer"> Please complete the sentence. </div>
+
+                    <div class="box box-question">
+                        <img class="refres-btn js-refresh-btn" src="img/icons/refresh.png" alt="">
+                        <div class="animated js-animated">
+                            <div class="left-content js-left-content"></div>
+
+                            <!--<input type="text" name="head" class="head-input dynamic js-head js-dynamic "></input>-->
+                            <input type="text" name="word" class="word-input js-word">
+                            <input type="text" name="id" class="word-id js-id">
+                            <!--<input type="text" name="tail" class="tail-input dynamic js-tail js-dynamic "></input>-->
+
+                            <div class="right-content js-right-content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn_submit js-submit-btn" type="submit" name="submit">Get in touch</button>
+        </form>
+    </div>
+</div>
+
+<script src="./js/formValidation.js"></script>
